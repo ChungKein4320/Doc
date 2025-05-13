@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang Chủ</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <style>
+            * {
+                font-family: "Times New Roman", Times, serif;
+                padding: 0;
+                margin: 0;
+                font-size: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 box">
+                    <img src="../img/banner1.jpg" alt="" class="img-fruid w-100" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 box">
+                    <nav class="navbar-collapse">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-toggle="modal" data-target="#modalForm">ĐẶT MUA HOA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">CÂY XANH VĂN PHÒNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">TIN TỨC</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 box">
+                    <img src="../img/hinh2.webp" alt="" class="img-fruid w-100" />
+                </div>
+                <div class="col-10 box">
+                    <h3 class="text-center font-weight-bold">DANH SÁCH THÔNG TIN ĐẶT HÀNG NHANH</h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>HỌ VÀ TÊN</th>
+                                <th>SỐ ĐIỆN THOẠI</th>
+                                <th>NGÀY ĐẶT</th>
+                                <th>EMAIL CỦA BẠN</th>
+                                <th>LOẠI HOA</th>
+                                <th>LOẠI THANH TOÁN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Nguyen Luong</td>
+                                <td>0903.128.350</td>
+                                <td>2023-11-08</td>
+                                <td>nguyenluong1603@iuh.edu.vn</td>
+                                <td>Hoa Hồng Vàng</td>
+                                <td>Chuyển Khoản</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 box">
+                    <p class="text-center">MSSV: ---------- Lớp: ---------- Họ Và Tên: ----------</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 600px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center" id="modalLabel">THÔNG TIN ĐẶT HÀNG NHANH</h5>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" id="form">
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 text-right col-form-label">Họ Và Tên</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="name" required />
+                                    <div id="errName" class="text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 text-right col-form-label">Số Điện Thoại</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="phone" required />
+                                    <div id="errPhone" class="text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 text-right col-form-label">Ngày Đặt</label>
+                                <div class="col-sm-9">
+                                    <input type="date" class="form-control" id="date" required />
+                                    <div id="errDate" class="text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 text-right col-form-label">Email Của Bạn</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="email" required />
+                                    <div id="errEmail" class="text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 text-right col-form-label">Chọn Loại Hoa</label>
+                                <div class="col-sm-9">
+                                    <select id="typeFlower" class="form-control">
+                                        <option value="Hoa Hồng Nhung">Hoa Hồng Nhung</option>
+                                        <option value="Hoa Hồng Vàng">Hoa Hồng Vàng</option>
+                                        <option value="Hoa Hồng Trắng">Hoa Hồng Trắng</option>
+                                        <option value="Hoa Lan">Hoa Lan</option>
+                                        <option value="Hoa Nhiều Loại">Hoa Nhiều Loại</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-3 text-right col-form-label">Loại Thanh Toán</label>
+                                <div class="col-sm-9 align-self-center">
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="typePay" class="form-check-input" value="Tiền Mặt" />
+                                        <label for="" class="form-check-label">Tiền mặt</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" name="typePay" class="form-check-input" value="Chuyển Khoản" />
+                                        <label for="" class="form-check-label">Chuyển Khoản</label>
+                                    </div>
+                                    <div id="errTypePay" class="text-danger"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success w-100" id="btnSubmit">Đặt Hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#btnSubmit").on("click", function (e) {
+                    e.preventDefault();
+                    let valid = true;
+                    const name = $("#name").val();
+                    const phone = $("#phone").val();
+                    const dateStr = $("#date").val();
+                    const date = new Date(dateStr);
+                    const today = new Date();
+                    const email = $("#email").val();
+                    const typeFlower = $("typeFlower").val();
+                    const typePay = $("input[name='typePay']:checked").val();
+
+                    if (name.length == 0 || !/^([A-Z][a-z]+)(\s[A-Z][a-z]+)+$/.test(name)) {
+                        valid = false;
+                        $("#errName").text("*");
+                    } else {
+                        $("#errName").text("");
+                    }
+
+                    if (phone.length == 0 || !/^0\d{3}.\d{3}.\d{3}$/.test(phone)) {
+                        valid = false;
+                        $("#errPhone").text("*");
+                    } else {
+                        $("#errPhone").text("");
+                    }
+
+                    console.log(date)
+                    console.log(today)
+
+                    if (isNaN(date.getTime()) || date < today) {
+                        valid = false;
+                        $("#errDate").text("*");
+                    } else {
+                        $("#errDate").text("");
+                    }
+
+                    if (email.length == 0 || !/^[a-zA-Z0-9]{3,}@iuh\.edu\.vn$/.test(email)) {
+                        valid = false;
+                        $("#errEmail").text("*");
+                    } else {
+                        $("#errEmail").text("");
+                    }
+
+                    if (!typePay) {
+                        valid = false;
+                        $("#errTypePay").text("*");
+                    } else {
+                        $("#errTypePay").text("");
+                    }
+
+                    if (valid) {
+                        const stt = $("tabel tbody tr").length + 1;
+                        const newRow = `
+                            <tr>
+                                <td>${stt}</td>
+                                <td>${name}</td>
+                                <td>${phone}</td>
+                                <td>${date}</td>
+                                <td>${email}</td>
+                                <td>${typeFlower}</td>
+                                <td>${typePay}</td>
+                            </tr>
+                        `;
+
+                        $("table tbody").append(newRow);
+                        $("#form")[0].reset();
+                        $("#modalForm").modal("hide");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang Flower</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <style>
+            * {
+                font-family: "Times New Roman", Times, serif;
+                font-size: 15px;
+            }
+            .error-msg {
+                font-size: 13px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <!-- Header -->
+            <div class="row">
+                <div class="col-12 box">
+                    <img src="../img/banner1.jpg" alt="Trang Flower" class="img-fluid w-100" />
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="row">
+                <div class="col-12 box">
+                    <nav class="mt-2">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-bold" href="#">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-bold" href="#" data-toggle="modal" data-target="#modalForm">ĐẶT MUA HOA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-bold" href="#">CÂY XANH VĂN PHÒNG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link font-weight-bold" href="#">TIN TỨC</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="row">
+                <!-- Left -->
+                <div class="col-2 box">
+                    <img src="../img/hinh2.webp" alt="Cây xanh" class="img-fluid" />
+                </div>
+
+                <!-- Main -->
+                <div class="col-10 box">
+                    <h2 class="text-center mt-2 font-weight-bold">DANH SÁCH THÔNG TIN ĐẶT HÀNG NHANH</h2>
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>HỌ VÀ TÊN</th>
+                                <th>SỐ ĐIỆN THOẠI</th>
+                                <th>NGÀY ĐẶT</th>
+                                <th>EMAIL CỦA BẠN</th>
+                                <th>LOẠI HOA</th>
+                                <th>LOẠI THANH TOÁN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Nguyen Luong</td>
+                                <td>0903.128.350</td>
+                                <td>2023-11-08</td>
+                                <td>nguyenluong1603@iuh.edu.vn</td>
+                                <td>Hoa Hồng Vàng</td>
+                                <td>Chuyển Khoản</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="row">
+                <div class="col-12 box">
+                    <p class="text-center">MSSV: ------------- Lớp: ------------- Họ Và Tên: ------------------</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Form -->
+        <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 600px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title w-100 text-center" id="modalLabel">THÔNG TIN ĐẶT HÀNG NHANH</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body m-3">
+                        <form id="form">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Họ Và Tên</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="fullname" placeholder="Nhập họ và tên" required />
+                                    <div id="errFullname" class="error-msg text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Số Điện Thoại</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="phone" placeholder="0XXX.XXX.XXX" required />
+                                    <div id="errPhone" class="error-msg text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Ngày đặt</label>
+                                <div class="col-sm-9">
+                                    <input type="date" class="form-control" id="date" required />
+                                    <div id="errDate" class="error-msg text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Email Của bạn</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="email" placeholder="name_email@iuh.edu.vn" required />
+                                    <div id="errEmail" class="error-msg text-danger"></div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Chọn Loại Hoa</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="flowerType" required>
+                                        <option value="Hoa Hồng Nhung">Hoa Hồng Nhung</option>
+                                        <option value="Hoa Hồng Vàng">Hoa Hồng Vàng</option>
+                                        <option value="Hoa Cúc Trắng">Hoa Cúc Trắng</option>
+                                        <option value="Hoa Lan">Hoa Lan</option>
+                                        <option value="Hoa Hồng Nhiều Loại">Hoa Hồng Nhiều Loại</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Loại Thanh Toán</label>
+                                <div class="col-sm-9">
+                                    <div class="d-flex align-items-center">
+                                        <input type="radio" value="1" name="payType" class="m-2" /> Tiền Mặt <input type="radio" value="2" name="payType" class="m-2" /> Chuyển Khoản
+                                    </div>
+                                    <div id="errPayType" class="error-msg text-danger"></div>
+                                </div>
+                            </div> -->
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label text-right">Loại Thanh Toán</label>
+                                <div class="col-sm-9 d-flex align-items-center">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="payType" value="Tiền mặt" />
+                                        <label class="form-check-label">Tiền mặt</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="payType" value="Chuyển khoản" />
+                                        <label class="form-check-label">Chuyển khoản</label>
+                                    </div>
+                                    <div id="errPayType" class="error-msg text-danger"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success w-100" id="btnSubmit">ĐẶT HÀNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>
